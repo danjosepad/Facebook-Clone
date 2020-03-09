@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+
+import { MdAccountCircle } from 'react-icons/md'
+import { Container } from './styles';
+
+export default class Header extends Component {
+  render() {
+    return  (
+    <Container>
+      <img src="" alt="Facebook logo" />
+
+      <div>
+        <strong>Meu perfil</strong>
+        <MdAccountCircle size={36} color="#FFFFFF" />
+      </div>
+    </Container>
+    )
+  }
+}
