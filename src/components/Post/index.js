@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { PostHeader } from './styles';
+import { Header } from './styles';
 
 class PostHeader extends Component {
   render() {
@@ -8,13 +8,13 @@ class PostHeader extends Component {
 
     return(
     <>
-    <PostHeader>
+    <Header>
         <img src={data.author.avatar} alt="User image" /> 
       <div>
         <strong>{data.author.name}</strong>
         <small>{data.date}</small>
       </div>
-    </PostHeader>
+    </Header>
     
     </>     
     );
@@ -24,10 +24,26 @@ class PostHeader extends Component {
 class PostComments extends Component {
   render() {
     const { data } = this.props
-    const { comments } = data;
 
     return (
-      
+      <PostComment>
+        <img src={data.author.avatar} alt="User image" />
+        <div>
+          <strong>{data.author.name}</strong>
+          <span>{data.content}</span>
+        </div>
+      </PostComment>
     )
   }
-}export default 
+}
+
+export default class Post extends Component {
+  render() {
+    return (
+      <div>
+        <PostHeader data={data} />
+        {data.comments.map(comment => <PostComments key={comment.id} data={comment} />)}
+      </div>
+    )
+  }
+}
