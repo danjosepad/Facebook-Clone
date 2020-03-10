@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { FeedContainer } from './styles';
 
-import Post from '../Post';
+import PostItem from '../Post';
 
 export default class PostList extends Component {
   
@@ -27,25 +27,7 @@ export default class PostList extends Component {
           }
         ]
       },
-      {
-        id: 2,
-        author: {
-          name: "Julio Alcantara",
-          avatar: "https://i.pravatar.cc/300"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        comments: [
-          {
-            id: 1,
-            author: {
-              name: "Diego Fernandes",
-              avatar: "https://i.pravatar.cc/300"
-            },
-            content: "Conteúdo do comentário"
-          }
-        ]
-      }
+      
     ]
   };
   
@@ -56,7 +38,7 @@ export default class PostList extends Component {
     return (
       <FeedContainer>
         <ul>
-        {posts.map(post => <Post key={post.id} data={post} />)}
+        {posts.map(post => <PostItem key={post.id} {...post} />)}
         </ul>
       </FeedContainer>
       );

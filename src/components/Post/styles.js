@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PostHeader = styled.li`
+export const Header = styled.div`
   list-style: none;
   display: flex;
   align-items: center;
@@ -29,6 +29,8 @@ export const PostHeader = styled.li`
     display: block;
 
   }
-
-
 `;
+export const PostComment = styled.div`
+  display: flex;
+  flex-direction: row;
+`
