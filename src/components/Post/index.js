@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Header , PostComment } from './styles';
+import { Header , PostComment, PostItem } from './styles';
 
 class PostHeader extends Component {
   render() {
@@ -36,32 +36,15 @@ class PostComments extends Component {
 
 export default class Post extends Component {
   render() {
-    const { author, date, comments } = this.props;
+    const { author, date, content, comments } = this.props;
 
     return (
-      <div>
-        {/*{
-        id: 2,
-        author: {
-          name: "Julio Alcantara",
-          avatar: "https://i.pravatar.cc/300"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        comments: [
-          {
-            id: 1,
-            author: {
-              name: "Diego Fernandes",
-              avatar: "https://i.pravatar.cc/300"
-            },
-            content: "Conteúdo do comentário"
-          }
-        ]
-      }*/}
+      <PostItem>
         <PostHeader author={author} date={date} />
+        <p>{content}</p>
+        <hr />
         {comments.map(comment => <PostComments key={comment.id} data={comment} />)}
-      </div>
+      </PostItem>
     )
   }
 }

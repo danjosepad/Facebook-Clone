@@ -27,7 +27,25 @@ export default class PostList extends Component {
           }
         ]
       },
-      
+      {
+        id: 2,
+        author: {
+          name: "Julio Alcantara",
+          avatar: "https://i.pravatar.cc/300"
+        },
+        date: "04 Jun 2019",
+        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "Diego Fernandes",
+              avatar: "https://i.pravatar.cc/300"
+            },
+            content: "Conteúdo do comentário"
+          }
+        ]
+      },
     ]
   };
   
