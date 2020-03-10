@@ -3,50 +3,12 @@ import React, { Component } from 'react';
 import { FeedContainer } from './styles';
 
 import PostItem from '../Post';
+import posts from '../../services/fakePosts';
 
 export default class PostList extends Component {
   
   state = {
-    posts: [
-      {
-        id: 1,
-        author: {
-          name: "Julio Alcantara",
-          avatar: "https://i.pravatar.cc/300"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        comments: [
-          {
-            id: 1,
-            author: {
-              name: "Diego Fernandes",
-              avatar: "https://i.pravatar.cc/300"
-            },
-            content: "Conteúdo do comentário"
-          }
-        ]
-      },
-      {
-        id: 2,
-        author: {
-          name: "Julio Alcantara",
-          avatar: "https://i.pravatar.cc/300"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        comments: [
-          {
-            id: 1,
-            author: {
-              name: "Diego Fernandes",
-              avatar: "https://i.pravatar.cc/300"
-            },
-            content: "Conteúdo do comentário"
-          }
-        ]
-      },
-    ]
+    posts: posts 
   };
   
 

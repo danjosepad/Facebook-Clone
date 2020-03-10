@@ -20,7 +20,7 @@ export const Header = styled.div`
     }
 
     small {
-      color: #dddd;
+      color: #c4c4c4;
 
     }
   }
@@ -31,6 +31,7 @@ export const Header = styled.div`
 export const PostComment = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   img {
       width: 40px;
@@ -69,4 +70,8 @@ export const PostItem = styled.li`
     border: 1px solid #f1f1f1;
     margin-bottom: 15px;
   }
+
+  @media (max-width: 800px) {
+    width: 80%;
+}
 `
